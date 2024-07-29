@@ -33,5 +33,6 @@ if ($null -ne $Proc) {
 }
 
 
-# Place this line in your zabbix_agentd.conf or in zabbix_agent2.conf Depending on your agent version
-# UserParameter=process.stats[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Zabbix Agent2\scripts\GetProc.ps1" "$1"
+# Place these lines in your zabbix_agentd.conf or in zabbix_agent2.conf Depending on your agent version
+# UserParameter=process.stats.CPU[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Zabbix Agent2\scripts\GetProc.ps1" "$1" 1
+# UserParameter=process.stats.Mem[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Zabbix Agent2\scripts\GetProc.ps1" "$1" 2
